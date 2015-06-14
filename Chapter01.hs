@@ -32,3 +32,11 @@ not' True'  = False'
 
 switch' :: Both' -> Both'
 switch' (Tuple' b c) = Tuple' (not' b) c
+
+cand' :: Bool' -> Bool' -> Bool'
+cand' False' b = False'
+cand' True'  b = b
+
+data Maybe' a = Nothing' | Just' a
+              deriving (Eq, Ord, Show)
+
